@@ -227,7 +227,6 @@ main {
   align-items: center;
   justify-content: center;
   position: relative;
-  min-height: 668px;
   width: 100%;
   min-height: 100vh;
 }
