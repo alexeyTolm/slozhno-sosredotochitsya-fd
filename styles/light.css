@@ -18,6 +18,8 @@
   --link-hover: 1px 1px 0 var(--accent-color);
   --link-shadow: 2px 2px 0 #FF0070;
   --border-color: #353430;
+  --text-link: 1px solid #000;
+  --button-visual: 1px solid rgb(0, 0, 0, .3);
 }
 
 @media (prefers-color-scheme: light) {
@@ -34,9 +36,11 @@
     --link-hover: 1px 1px 0 var(--accent-color);
     --border-color: #353430;
     --rec-color: transparent;
+    --text-link: 1px solid #000;
+    --button-visual: 1px solid rgb(0, 0, 0, .3);
   }
 }
-
 .theme-light .rec {
   display: none;
 }
+

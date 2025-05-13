@@ -1,16 +1,20 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 .header {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   position: relative;
   background: var(--header-bg);
-  padding-bottom: 50px;
+  min-height: 100vh;
+  width: 100%;
+  padding: 0 10px 50px;
 }
 
 .header::before {
   content: '';
   position: absolute;
   top: 10px;
-  right: 20px;
+  right: 10px;
   width: 25px;
   height: 25px;
   border-top: 1px solid var(--heading-color);
@@ -21,7 +25,7 @@
   content: '';
   position: absolute;
   bottom: 10px;
-  left: 5px;
+  left: 10px;
   width: 25px;
   height: 25px;
   border-bottom: 1px solid var(--heading-color);
@@ -32,7 +36,7 @@
 .rec {
   position: absolute;
   top: 10px;
-  right: 25px;
+  right: 15px;
   font-size: var(--font-size-base);
   width: 52px;
   height: 26px;
@@ -52,12 +56,15 @@
   margin-left: 6px;
 }
 
+.header__theme-menu {
+  width: 100%;
+}
+
 .header__theme-menu-list {
   display: grid;
   gap: 8px;
   justify-self: end;
   margin-top: 69px;
-  margin-right: 10px;
   margin-bottom: 63px;
   width: 70px;
 }
@@ -85,27 +92,29 @@
   pointer-events: none;
 }
 
+.header__theme-menu-button:hover {
+  outline: var(--button-visual);
+}
+
+.header__theme-menu-button:focus {
+  border-bottom: var(--button-visual);
+}
+
 .header__title-text {
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   text-shadow: 4px 4px 0 var(--accent-color);
   color: var(--title-color);
   line-height: 82.5%;
-  align-self: center;
   font-family: var(--font-family);
   font-weight: bold;
   font-display: swap;
-  margin-left: 10px;
-  margin-bottom: 40px;
-}
-
-.title-decor {
-  background-color: var(--accent-color);
+  margin-bottom: 55px;
 }
 
 .header__accent-text {
-  width: 355px;
-  height: 117px;
-  margin: 55px 10px 0 15px;
+  max-width: 355px;
+  min-height: 117px;
+  height: fit-content;
   color: var(--text-on-accent);
   font-family: var(--font-family);
   font-weight: bold;
@@ -115,6 +124,7 @@
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   background-color: var(--body-bg);
+  background-attachment: fixed;
 }
 
 main {
@@ -123,7 +133,7 @@ main {
 
 .main__content {
   display: grid;
-  gap: 56px;
+  gap: 48px;
 }
 
 .main__main-text {
@@ -137,7 +147,22 @@ main {
 
 }
 
+.text-link {
+  text-decoration: none;
+}
+
+.text-link:hover {
+  border-bottom: var(--text-link);
+}
+
+.text-link:focus {
+  outline: var(--text-link);
+}
+
 .block-text {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
   width: 355px;
   font-family: var(--font-family);
   color: var(--text-on-accent);
@@ -151,39 +176,41 @@ main {
 }
 
 .title-decor {
-  margin-top: 20px;
-  margin-bottom: 10px;
+  background-color: var(--accent-color);
   color: #000028;
   font-family: var(--font-family);
   font-weight: bold;
   font-display: swap;
   font-size: var(--font-size-base);
-  line-height: 1.234;
+  line-height: 1.3;
 }
 
+.main__content-block-1, .main__content-block-2, .main__content-block-3 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
 .block-1 {
   display: grid;
-  gap: 10px;
+  gap: 24px;
 }
 
 .block-2 {
   display: grid;
-  gap: 8px;
+  gap: 24px;
 }
 
 .block-3 {
   display: grid;
-  gap: 15px;
+  gap: 24px;
+  /* ... */
 }
-
-.title-decor.photo {
-  margin-top: 10px;
-}
+  
 
 .main__block-photo {
   display: grid;
-  gap: 10px;
+  gap: 8px;
 }
 
 .photo {
@@ -195,10 +222,14 @@ main {
 }
 
 .footer {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   position: relative;
   min-height: 668px;
-  margin: 30px 14px 13px 15px;
+  width: 100%;
+  min-height: 100vh;
 }
 
 .footer__title-text {
@@ -210,13 +241,14 @@ main {
   font-family: var(--font-family);
   font-weight: bold;
   font-display: swap;
+  margin-top: 60px;
 }
 
 .footer::before {
   content: '';
   position: absolute;
-  top: 10px;
-  right: -5px;
+  top: 40px;
+  right: 10px;
   width: 25px;
   height: 25px;
   border-top: 1px solid var(--heading-color);
@@ -226,8 +258,8 @@ main {
 .footer::after {
   content: '';
   position: absolute;
-  bottom: 10px;
-  left: -5px;
+  bottom: -20px;
+  left: 10px;
   width: 25px;
   height: 25px;
   border-bottom: 1px solid var(--heading-color);
@@ -241,31 +273,35 @@ main {
 
 @media (min-width: 768px) {
   
+  .header {
+    padding-left: 0;
+    align-items: flex-end;
+  }
+
   .header__title-text {
-    margin-left: 0px;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    margin-right: auto;
   }
 
   .header__accent-text {
-    margin-top: 120px;
-    justify-self: end;
-    margin-bottom: 134px;
-    margin-right: 20px;
-    width: 364px;
-    height: 115px;
+    max-width: 366px;
+    margin-top: 106px;
+    margin-right: 10px;
   }
 
   .header__theme-menu-list {
     margin-top: 187px;
-    margin-right: 20px;
+    margin-right: 10px;
     margin-bottom: 173px;
   }
   .header::before {
     top: 20px;
+    right: 20px;
   }
 
   .rec {
     top: 20px;
+    right: 30px;
   }
 
   .rec::after {
@@ -278,7 +314,7 @@ main {
   }
 
   main {
-    padding-top: 45px;
+    padding-top: 60px;
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -289,13 +325,13 @@ main {
     grid-template-columns: 1fr 2fr;
     margin-bottom: 40px;
   }
+
+  .main__content {
+    gap: 40px;
+  }
   
   .main__main-text {
     width: 234px;
-  }
-
-  .main__main-text-wrapper {
-    margin-top: 20px;
   }
 
   .block-text {
@@ -312,13 +348,10 @@ main {
   }
 
   .block-3 {
-    margin-top: 5px;
+    margin-top: 40px;
     display: grid;
     grid-template-columns: 1fr 2fr;
-    margin-bottom: 23px;
-  }
-  .main__content-block-3 .block-text + .block-text {
-    margin-top: 25px;
+    margin-bottom: 40px;
   }
   
   .main__block-photo.gallery {
@@ -353,7 +386,7 @@ main {
   
   .gallery__item:nth-child(1) {
     grid-column: span 2;
-    grid-row: span 1;    
+    grid-row: span 1;
   }
 
   .gallery__item:nth-child(2) {
@@ -379,30 +412,36 @@ main {
   .footer__title-text {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     justify-self: center;
-    margin: 486px 0 463px 0;
+    margin: 524px 0 463px 0;
     width: 360px;
   }
 
   .footer::after {
-    left: 10px;
+    left: 20px;
+    bottom: 20px;
   }
 
   .footer::before {
-    top: 46px;
-    right: 10px;
+    top: 80px;
+    right: 22px;
   }
 }
 
 @media (min-width: 1024px) {
+  .header {
+    padding: 0;
+  }
+  
   .header__theme-menu-list {
     display: flex;
-    justify-self: center;
-    margin: 18px 397px 273px 397px;
-    width: 240px;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0px 273px;
+    width: 100%;
   }
-  .rec {
-    margin-top: 1px;
-    margin-right: 2px;
+
+  .header__theme-menu-button {
+    height: 26px;
   }
 
   .header::before {
@@ -414,35 +453,29 @@ main {
   }
 
   .header__accent-text {
-    margin-top: 112px;
-    justify-self: end;
-    margin-bottom: 86px;
-    margin-right: 30px;
-    width: 491px;
-    height: 71px;
+    margin: 0;
+    margin-right: 20px;
+    max-width: 491px;
+    min-height: 71px;
   }
 
   .header__title-text {
-    margin: 0;
+    margin-bottom: 114px;
   }
 
   main {
-    padding-top: 40px;
+    padding-top: 60px;
+    gap: 35px;
     padding-left: 20px;
     padding-right: 20px;
   }
 
-  .main__main-text-wrapper {
-    margin-top: 10px;
-  }
-
   .main__main-text {
-    margin-top: 10px;
     width: 314px;
   }
 
   .main__content-block-1 {
-    gap: 5px;
+    gap: 20px;
   }
 
   .block-text {
@@ -453,14 +486,16 @@ main {
     width: 314px;
   }
 
+  .block-3 {
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+
   .main__content-block-2 {
     margin-bottom: 23px;
     display: grid;
     gap: 20px;
     grid-template-columns: 1fr 1fr 1fr;
-  }
-  .main__content {
-    gap: 35px;
   }
 
   .main__content-block-3 {
@@ -473,16 +508,17 @@ main {
 
   .footer__title-text {
     margin: 0;
-    margin-top: 145px;
+    margin-top: 130px;
     justify-content: center;
     justify-items: center;
   }
 
   .footer::before {
-    top: 50px;
+    top: 83px;
+    right: 20px;
   }
 
   .footer::after {
-    display: none;
+    bottom: -44px;
   }
 }

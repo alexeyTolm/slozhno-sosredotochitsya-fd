@@ -18,5 +18,7 @@
   --link-hover-shadow: 1px 1px 0 var(--accent-color);
   --font-family: 'IBM Plex mono', monospace;
   --font-size-base: 18px;
+  --text-link: 1px solid #F1B2CE;
+  --button-visual: 1px solid rgb(255, 0, 112, .5);
 }
 

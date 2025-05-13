@@ -16,5 +16,7 @@
   --rec-color: #FF0070;
   --link-shadow: 2px 2px 0 var(--accent-color);
   --link-hover-shadow: 1px 1px 0 var(--accent-color);
+  --text-link: 1px solid #F1B2CE;
 }
+
 
