@@ -20,6 +20,7 @@
   --border-color: #353430;
   --text-link: 1px solid #000;
   --button-visual: 1px solid rgb(0, 0, 0, .3);
+  --title-text-color: #353430;
 }
 
 @media (prefers-color-scheme: light) {
@@ -38,6 +39,7 @@
     --rec-color: transparent;
     --text-link: 1px solid #000;
     --button-visual: 1px solid rgb(0, 0, 0, .3);
+    --title-text-color: #353430;
   }
 }
 .theme-light .rec {
