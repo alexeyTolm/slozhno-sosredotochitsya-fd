@@ -21,28 +21,34 @@
   --text-link: 1px solid #000;
   --button-visual: 1px solid rgb(0, 0, 0, .3);
   --title-text-color: #353430;
+  --link-shadow: 2px 2px 0 var(--accent-color);
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    --body-bg: #FFF1F7;
-    --header-bg: url(../images/cover-image-light.png) center / cover no-repeat;
-    --accent-color: #FF8DCB;
-    --title-color: #FFC2E6;
-    --text-color: #353430;
-    --heading-color: #353430;
-    --decor-bg: #FF8DCB;
-    --link-shadow: 2px 2px 0 #FF0070;
-    --link-shadow: 2px 2px 0 var(--accent-color);
-    --link-hover: 1px 1px 0 var(--accent-color);
-    --border-color: #353430;
-    --rec-color: transparent;
-    --text-link: 1px solid #000;
-    --button-visual: 1px solid rgb(0, 0, 0, .3);
-    --title-text-color: #353430;
+  --theme-button-color: #353430;
+  --body-bg: #FFF1F7;
+  --header-bg: url(../images/cover-image-light.png) center / cover no-repeat;
+  --accent-color: #FF8DCB;
+  --title-color: #FFC2E6;
+  --text-color: #353430;
+  --heading-color: #353430;
+  --decor-bg: #FF8DCB;
+  --text-on-accent: #353430;
+  --link-shadow: 2px 2px 0 var(--accent-color);
+  --link-hover: 1px 1px 0 var(--accent-color);
+  --link-shadow: 2px 2px 0 #FF0070;
+  --border-color: #353430;
+  --text-link: 1px solid #000;
+  --button-visual: 1px solid rgb(0, 0, 0, .3);
+  --title-text-color: #353430;
+  --link-shadow: 2px 2px 0 var(--accent-color);
   }
 }
 .theme-light .rec {
   display: none;
 }
 
+.shadowed-text {
+
+}

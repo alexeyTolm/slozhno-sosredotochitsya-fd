@@ -5,7 +5,10 @@
 */
 
 :root.theme-dark {
+  --theme-button-color: #FF0070;
+  --text-on-accent: #F1B2CE;
   --body-bg: #000028;
+  --title-text-color: #000028;
   --header-bg: url(../images/cover-image-dark.png) center / cover no-repeat;
   --accent-color: #FF0070;
   --decor-bg: var(--accent-color);
@@ -17,6 +20,9 @@
   --link-shadow: 2px 2px 0 var(--accent-color);
   --link-hover-shadow: 1px 1px 0 var(--accent-color);
   --text-link: 1px solid #F1B2CE;
+  --button-visual: 1px solid rgb(255, 0, 112, .5);
 }
 
-
+.theme-dark .rec {
+  display: inline;
+}
