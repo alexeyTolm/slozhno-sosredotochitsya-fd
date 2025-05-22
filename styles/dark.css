@@ -21,6 +21,7 @@
   --link-hover-shadow: 1px 1px 0 var(--accent-color);
   --text-link: 1px solid #F1B2CE;
   --button-visual: 1px solid rgb(255, 0, 112, .5);
+  --button-visual-no-transparent: 1px solid rgb(255, 0, 112);
 }
 
 .theme-dark .rec {
